@@ -21,5 +21,5 @@ Manga module app using React and Redux.
 
 ## Note
 
-Currently changing and fixing design (Material UI and others).
-Currently optimizing file structure
+* Currently changing and fixing design (Material UI and others).
+* Currently optimizing file structure
