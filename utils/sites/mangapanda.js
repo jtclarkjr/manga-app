@@ -3,7 +3,7 @@ const fetch = require('node-fetch')
 const { NOT_LOADED, NOT_DOWNLOADED } = require('../constants.js')
 
 function mangaURL (mangaName) {
-  return `https://www.mangaeden.com/en/en-manga/${mangaName}`
+  return `https://www.mangapanda.com/${mangaName}`
 }
 
 function sendRequest (url, buffer = false) {
@@ -16,18 +16,18 @@ function sendRequest (url, buffer = false) {
 function parseMangaData (mangaName, body) {
   const $ = cheerio.load(body)
 
-  const title = $('h1 .manga-title').text().trim()
-  const description = $('#mangaDescription').text().trim()
-  const image = $('img.floatRightImage').attr('src')
+  const title = $('#mangaproperties h1').text().trim()
+  const description = $('#readmangasum p').text().trim()
+  const image = $('#mangaimg img').attr('src')
 
   let chapters = []
-  $('table tr').each(function (idx, element) {
+  $('#listing tr').each(function (idx, element) {
     if (idx !== 0) {
       let [name, url, date] = [null, null, null]
       $(element).find('td').each(function (idx, element) {
         if (idx === 0) {
           name = $(element).find('a').text()
-          url = `https://www.mangaeden.com${$(element).find('a').attr('href')}`
+          url = `https://www.mangapanda.com${$(element).find('a').attr('href')}`
         } else if (idx === 1) {
           date = $(element).text().trim()
         }
@@ -49,7 +49,7 @@ function parseMangaData (mangaName, body) {
   })
 
   return {
-    type: 'www.mangaeden.com',
+    type: 'www.mangapanda.com',
     title,
     name: mangaName,
     description,
@@ -64,8 +64,8 @@ function parsePageLinks (url, body) {
   const $ = cheerio.load(body)
 
   let links = []
-  $('.selected option').each(function (idx, option) {
-    const url = `https://www.mangaeden.com${option.attribs.value}`
+  $('#pageMenu option').each(function (idx, option) {
+    const url = `https://www.mangapanda.com${option.attribs.value}`
     links.push(url)
   })
 
