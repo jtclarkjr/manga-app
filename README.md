@@ -1,8 +1,8 @@
-## Manga App
+# Manga App
 
 Manga module app using React and Redux.
 
-# Features
+## Features
 
 * Can add and view manga available from the below sites with the URL
 * Download chapters
