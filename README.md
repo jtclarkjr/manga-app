@@ -21,5 +21,6 @@ Manga module app using React and Redux.
 
 ## Note
 
+* For env using Electron and Jest with babel and webpack configs
 * Currently changing and fixing design (Material UI and others).
 * Currently optimizing file structure
