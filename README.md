@@ -17,7 +17,7 @@ Manga module app using React and Redux.
 
 * mangareader.net
 * mangafreak.net
-* mangaeden.com (removed due to conflicts with non en language sourcing)
+* ~~mangaeden.com~~ (removed due to conflicts with non en language sourcing)
 * mangapanda.com (replaced mangaeden)
 
 ## Note
