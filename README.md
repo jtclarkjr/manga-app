@@ -24,5 +24,9 @@ Manga module app using React and Redux.
 ## Note
 
 * For env using Electron and Jest with babel and webpack configs
+* Can find cache for downloads and saved titles on local here:
+
+~/Library/Application Support/manga-app/init.json
+
 * Currently changing and fixing design (Material UI and others).
 * Currently optimizing file structure
