@@ -13,7 +13,7 @@ Manga module app using React and Redux.
 * Horizontal scroll slider to move between pages
 * English version manga
 
-## Manga URLs
+## Manga Sources
 
 * mangareader.net
 * mangafreak.net
