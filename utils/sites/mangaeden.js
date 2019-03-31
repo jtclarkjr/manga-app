@@ -1,48 +1,33 @@
 const cheerio = require('cheerio')
-const cloudscraper = require('cloudscraper')
+const fetch = require('node-fetch')
 const { NOT_LOADED, NOT_DOWNLOADED } = require('../constants.js')
 
 function mangaURL (mangaName) {
-  return `https://www.kissmanga.com/Manga/${mangaName}`
+  return `https://www.mangaeden.com/en/en-manga/${mangaName}`
 }
 
 function sendRequest (url, buffer = false) {
-  return new Promise((resolve, reject) => {
-    if (buffer) {
-      cloudscraper.request({ method: 'GET', url: url, encoding: null }, function (err, resp, body) {
-        if (err) {
-          return reject(err)
-        }
-
-        resolve(body)
-      })
-    } else {
-      cloudscraper.get(url, function (err, resp, body) {
-        if (err) {
-          return reject(err)
-        }
-
-        resolve(body)
-      })
-    }
-  })
+  if (buffer) {
+    return fetch(url).then((res) => res.buffer())
+  }
+  return fetch(url).then((res) => res.text())
 }
 
 function parseMangaData (mangaName, body) {
   const $ = cheerio.load(body)
 
-  const title = $('.manga_series_data h5').text().trim()
-  const description = $('.manga_series_description p').text().trim()
-  const image = $('.manga_series_image img').attr('src')
+  const title = $('h1 .manga-title').text().trim()
+  const description = $('#mangaDescription').text().trim()
+  const image = $('img.floatRightImage').attr('src')
 
   let chapters = []
-  $('.manga_series_list tr').each(function (idx, element) {
+  $('table tr').each(function (idx, element) {
     if (idx !== 0) {
       let [name, url, date] = [null, null, null]
       $(element).find('td').each(function (idx, element) {
         if (idx === 0) {
           name = $(element).find('a').text()
-          url = `https://www.kissmanga.com${$(element).find('a').attr('href')}`
+          url = `https://www.mangaeden.com${$(element).find('a').attr('href')}`
         } else if (idx === 1) {
           date = $(element).text().trim()
         }
@@ -64,7 +49,7 @@ function parseMangaData (mangaName, body) {
   })
 
   return {
-    type: 'www.kissmanga.com',
+    type: 'www.mangaeden.com',
     title,
     name: mangaName,
     description,
@@ -79,8 +64,8 @@ function parsePageLinks (url, body) {
   const $ = cheerio.load(body)
 
   let links = []
-  $('.read_selector option').each(function (idx, option) {
-    const url = `https://www.kissmanga${option.attribs.value}`
+  $('.selected option').each(function (idx, option) {
+    const url = `https://www.mangaeden.com${option.attribs.value}`
     links.push(url)
   })
 
@@ -89,7 +74,7 @@ function parsePageLinks (url, body) {
 
 function parsePageImage (body) {
   const $ = cheerio.load(body)
-  return $('#gohere').attr('src')
+  return $('#img').attr('src')
 }
 
 module.exports = {

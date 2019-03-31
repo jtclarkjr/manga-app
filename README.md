@@ -17,7 +17,7 @@ Manga module app using React and Redux.
 
 * mangareader.net
 * mangafreak.net
-* kissmanga.com(currently being fixed). 
+* mangaeden.com (currently being fixed; doesnt fetch all data correctly). 
 
 ## Note
 

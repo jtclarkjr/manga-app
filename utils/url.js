@@ -6,7 +6,7 @@ function hostnameFromURL (url) {
 
 //Add hosting url here
 const hostnameAdapterMap = {
-  'www.kissmanga.com': require('./sites/kissmanga.js'),
+  'www.mangaeden.com': require('./sites/mangaeden.js'),
   'www.mangareader.net': require('./sites/mangareader.js'),
   'www.mangafreak.net': require('./sites/mangafreak.js'),
   'www3.mangafreak.net': require('./sites/mangafreak.js')
