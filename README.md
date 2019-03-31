@@ -19,4 +19,7 @@ Manga module app using React and Redux.
 * mangafreak.net
 * kissmanga.com(currently being fixed). 
 
+## Note
 
+Currently changing and fixing design (Material UI and others).
+Currently optimizing file structure
