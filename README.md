@@ -23,7 +23,10 @@ Manga module app using React and Redux.
 
 ## Note
 
+* For dev yarn/npm on root folder at cd <foldername> and yarn/npm start to run scripts on local
 * For env using Electron for native module and Jest for testing with babel and webpack configs
+    Jest: for test build
+    
 * Can find cache for downloads and saved titles on local here:
 
     ~/Library/Application Support/manga-app/init.json
