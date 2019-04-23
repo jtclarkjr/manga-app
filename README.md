@@ -1,6 +1,6 @@
 # Manga App
 
-Manga module app using React and Redux.
+Manga desktop module application using React/ Redux/ Electron.
 
 ## Features
 
