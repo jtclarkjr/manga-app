@@ -28,7 +28,7 @@ Manga module app using React and Redux.
     
     Jest: for test build
     
-* Can find cache for downloads and saved titles on local here:
+* Can find cache for downloads and saved titles on local here (Mac OS):
 
     ~/Library/Application Support/manga-app/init.json
 
