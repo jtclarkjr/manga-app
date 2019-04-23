@@ -24,10 +24,10 @@ Manga desktop module application using React/ Redux/ Electron.
 
 ## Note
 
-* For dev yarn/npm on root folder at cd <foldername> and yarn/npm start to run scripts on local
-* For env using Electron for native module and Jest for testing with babel and webpack configs
+* For dev yarn/npm on root folder at cd /folder and yarn/npm start to run scripts on local
+* Env using Electron for native module and travis for testing with babel and webpack configs
     
-        Jest: Test build
+        Travis: npm test
     
 * Can find cache for downloads and saved titles on local here (Mac OS):
 
