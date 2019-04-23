@@ -7,11 +7,12 @@ Manga module app using React and Redux.
 * Can add and view manga available from the below sites with the URL
 * Download chapters
 * Download cache, resume download on re-opening app
-* No need to confirm the latest chapter since there is a queue that does that
+* Delete unwanted chapters within the specific chapter section (where you can see the chapters)
+* No need to confirm the latest chapter since there is a queue that updates for new chapters
 * Single page viewer
 * Go to the next or previous page by clicking the left or right side of the viewer.
 * Horizontal scroll slider to move between pages
-* English version manga
+* English translated manga only
 
 ## Manga Sources
 
@@ -26,11 +27,11 @@ Manga module app using React and Redux.
 * For dev yarn/npm on root folder at cd <foldername> and yarn/npm start to run scripts on local
 * For env using Electron for native module and Jest for testing with babel and webpack configs
     
-    Jest: for test build
+        Jest: Test build
     
 * Can find cache for downloads and saved titles on local here (Mac OS):
 
-    ~/Library/Application Support/manga-app/init.json
+        ~/Library/Application Support/manga-app/init.json
 
 * Currently changing and fixing design (Material UI and others).
 * Currently optimizing file structure
