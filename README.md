@@ -22,6 +22,8 @@ Manga desktop module application using React/ Redux/ Electron.
 * mangapanda.com (replaced mangaeden)
 * Currently adding mangahere and mangafox (now know as fanfox)
 
+(Uses scrapping from manga sources to get the img data)
+
 ## Note
 
 * For dev yarn/npm on root folder at cd /folder and yarn/npm start to run scripts on local
