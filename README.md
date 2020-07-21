@@ -20,7 +20,7 @@ Manga desktop module application using React/ Redux/ Electron.
 * mangafreak.net
 * ~~mangaeden.com~~ (removed due to conflicts with non en language sourcing)
 * mangapanda.com (replaced mangaeden)
-* Currently adding mangahere and mangafox (now know as fanfox)
+* ~~Currently adding mangahere and mangafox (now know as fanfox)~~ 
 
 (Uses scrapping from manga sources to get the img data)
 
