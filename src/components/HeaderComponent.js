@@ -87,7 +87,7 @@ export default class HeaderComponent extends React.Component {
           open={this.state.open}
           onRequestClose={this.handleClose}
         >
-          <div>Enter the url of the manga in the text field</div>
+          <div>Enter the url of the manga in the text field (w13.mangafreak.net)</div>
           <TextField
             id='text-field-default'
             errorText={errorText}

@@ -3,7 +3,7 @@ const cloudscraper = require('cloudscraper')
 const { NOT_LOADED, NOT_DOWNLOADED } = require('../constants.js')
 
 function mangaURL (mangaName) {
-  return `http://www.mangafreak.net/Manga/${mangaName}`
+  return `https://w13.mangafreak.net/Manga/${mangaName}`
 }
 
 function sendRequest (url, buffer = false) {
@@ -42,7 +42,7 @@ function parseMangaData (mangaName, body) {
       $(element).find('td').each(function (idx, element) {
         if (idx === 0) {
           name = $(element).find('a').text()
-          url = `http://www.mangafreak.net${$(element).find('a').attr('href')}`
+          url = `https://w13.mangafreak.net${$(element).find('a').attr('href')}`
         } else if (idx === 1) {
           date = $(element).text().trim()
         }
@@ -64,7 +64,7 @@ function parseMangaData (mangaName, body) {
   })
 
   return {
-    type: 'www.mangafreak.net',
+    type: 'w13.mangafreak.net',
     title,
     name: mangaName,
     description,
@@ -80,7 +80,7 @@ function parsePageLinks (url, body) {
 
   let links = []
   $('.read_selector option').each(function (idx, option) {
-    const url = `http://www.mangafreak.net${option.attribs.value}`
+    const url = `https://w13.mangafreak.net${option.attribs.value}`
     links.push(url)
   })
 
