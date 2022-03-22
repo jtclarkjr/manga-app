@@ -16,12 +16,11 @@ Manga desktop module application using React/ Redux/ Electron.
 
 ## Manga Sources
 
-* mangafreak.net (updated use w13.mangafreak.net for url inputs)
-
-Depreciated need to removed these from source code
-* ~~mangareader.net~~ (site closed)
+* mangareader.net
+* mangafreak.net
 * ~~mangaeden.com~~ (removed due to conflicts with non en language sourcing)
-* ~~mangapanda.com~~ (site closed)
+* mangapanda.com (replaced mangaeden)
+* ~~Currently adding mangahere and mangafox (now know as fanfox)~~ 
 
 (Uses scrapping from manga sources to get the img data)
 
@@ -29,13 +28,13 @@ Depreciated need to removed these from source code
 
 * For dev yarn/npm on root folder at cd /folder and yarn/npm start to run scripts on local
 * Env using Electron for native module and jest/ travis for testing with babel and webpack configs
-
+    
+        Jest:
         Travis: npm test
     
-* Can find cache for downloads and saved titles on local here:
+* Can find cache for downloads and saved titles on local here (Mac OS):
 
-        ~/Library/Application Support/manga-app/init.json (Mac OS)
+        ~/Library/Application Support/manga-app/init.json
 
-        'C:\\Users\\user\\AppData\\Roaming\\manga-app\\init.json (Windows)
-
-        Works on linux also
+* Currently changing and fixing design (Material UI and others).
+* Currently optimizing file structure
