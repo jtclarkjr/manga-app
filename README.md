@@ -15,12 +15,12 @@ Manga desktop module application using React/ Redux/ Electron.
 * English translated manga only
 
 ## Manga Sources
+All sourced closed. need to add new sources and scrappers.
 
-* mangareader.net
-* mangafreak.net
-* ~~mangaeden.com~~ (removed due to conflicts with non en language sourcing)
-* mangapanda.com (replaced mangaeden)
-* ~~Currently adding mangahere and mangafox (now know as fanfox)~~ 
+* ~~mangareader.net~~ 
+* ~~mangafreak.net~~ 
+* ~~mangaeden.com~~ 
+* ~~mangapanda.com~~ 
 
 (Uses scrapping from manga sources to get the img data)
 
